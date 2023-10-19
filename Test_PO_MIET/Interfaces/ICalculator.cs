@@ -2,6 +2,9 @@
 
 public interface ICalculator
 {
+	public double First { get; set; }
+	public double Second { get; set; }
+
 	double Sum(double a, double b);
 
 	double Subtract(double a, double b);

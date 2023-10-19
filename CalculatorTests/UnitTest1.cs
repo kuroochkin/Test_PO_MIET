@@ -41,4 +41,44 @@ public class CalculatorTests
 	{
 		Assert.Throws<DivideByZeroException>(() => calculator.Divide(10, 0));
 	}
+
+	[Test]
+	public void Sum_Presenter()
+	{
+		ICalculatorPresenter presenter = new CalculatorPresenter(calculator, new CalculatorView());
+		calculator.First = 5;
+		calculator.Second = 3;
+		presenter.onPlusClicked();
+		Assert.AreEqual(8, presenter.Result);
+	}
+
+	[Test]
+	public void Subtract_Presenter()
+	{
+		ICalculatorPresenter presenter = new CalculatorPresenter(calculator, new CalculatorView());
+		calculator.First = 5;
+		calculator.Second = 3;
+		presenter.onMinusClicked();
+		Assert.AreEqual(2, presenter.Result);
+	}
+
+	[Test]
+	public void Miltiply_Presenter()
+	{
+		ICalculatorPresenter presenter = new CalculatorPresenter(calculator, new CalculatorView());
+		calculator.First = 5;
+		calculator.Second = 3;
+		presenter.onMultiplyClicked();
+		Assert.AreEqual(15, presenter.Result);
+	}
+
+	[Test]
+	public void Divide_Presenter()
+	{
+		ICalculatorPresenter presenter = new CalculatorPresenter(calculator, new CalculatorView());
+		calculator.First = 15;
+		calculator.Second = 3;
+		presenter.onDivideClicked();
+		Assert.AreEqual(5, presenter.Result);
+	}
 }

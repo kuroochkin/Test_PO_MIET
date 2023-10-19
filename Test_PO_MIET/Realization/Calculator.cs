@@ -4,6 +4,8 @@ namespace Test_PO_MIET.Realization;
 
 public class Calculator : ICalculator
 {
+	public double First { get; set; }
+	public double Second { get; set; }
 	public double Divide(double a, double b)
 	{
 		if (b == 0 || b < 0.00000001)

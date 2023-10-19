@@ -15,7 +15,6 @@ public class CalculatorView : ICalculatorView
     }
 
 	public string getFirstArgumentAsString()
-
 	{
 		return "Успешно введен первый аргумент";
 	}
