@@ -1,3 +1,5 @@
+using Moq;
+using NUnit.Framework;
 using Test_PO_MIET.Interfaces;
 using Test_PO_MIET.Realization;
 
@@ -45,40 +47,84 @@ public class CalculatorTests
 	[Test]
 	public void Sum_Presenter()
 	{
-		ICalculatorPresenter presenter = new CalculatorPresenter(calculator, new CalculatorView());
-		calculator.First = 5;
-		calculator.Second = 3;
+		var mock = new Mock<ICalculatorPresenter>();
+
+		mock.Setup(a => a.Result).Returns(8);
+
+		var presenter = new CalculatorPresenter(mock.Object, new Calculator(), new CalculatorView());
+
+		presenter.Calculator.First = 5;
+		presenter.Calculator.Second = 3;
+
 		presenter.onPlusClicked();
+
 		Assert.AreEqual(8, presenter.Result);
 	}
 
 	[Test]
 	public void Subtract_Presenter()
 	{
-		ICalculatorPresenter presenter = new CalculatorPresenter(calculator, new CalculatorView());
-		calculator.First = 5;
-		calculator.Second = 3;
+		var mock = new Mock<ICalculatorPresenter>();
+
+		mock.Setup(a => a.Result).Returns(2);
+
+		var presenter = new CalculatorPresenter(mock.Object, new Calculator(), new CalculatorView());
+
+		presenter.Calculator.First = 5;
+		presenter.Calculator.Second = 3;
+
 		presenter.onMinusClicked();
+
 		Assert.AreEqual(2, presenter.Result);
 	}
 
 	[Test]
 	public void Miltiply_Presenter()
 	{
-		ICalculatorPresenter presenter = new CalculatorPresenter(calculator, new CalculatorView());
-		calculator.First = 5;
-		calculator.Second = 3;
+		var mock = new Mock<ICalculatorPresenter>();
+
+		mock.Setup(a => a.Result).Returns(15);
+
+		var presenter = new CalculatorPresenter(mock.Object, new Calculator(), new CalculatorView());
+
+		presenter.Calculator.First = 5;
+		presenter.Calculator.Second = 3;
+
 		presenter.onMultiplyClicked();
+
 		Assert.AreEqual(15, presenter.Result);
 	}
 
 	[Test]
 	public void Divide_Presenter()
 	{
-		ICalculatorPresenter presenter = new CalculatorPresenter(calculator, new CalculatorView());
-		calculator.First = 15;
-		calculator.Second = 3;
+		var mock = new Mock<ICalculatorPresenter>();
+
+		mock.Setup(a => a.Result).Returns(5);
+
+		var presenter = new CalculatorPresenter(mock.Object, new Calculator(), new CalculatorView());
+
+		presenter.Calculator.First = 10;
+		presenter.Calculator.Second = 2;
+
 		presenter.onDivideClicked();
+
 		Assert.AreEqual(5, presenter.Result);
+	}
+
+	public void Subtract_Preser()
+	{
+		var mock = new Mock<MainWindow>();
+
+		mock.Setup(a => a.Result).Returns(2);
+
+		var presenter = new CalculatorPresenter(mock.Object, new Calculator(), new CalculatorView());
+
+		presenter.Calculator.First = 5;
+		presenter.Calculator.Second = 3;
+
+		presenter.onMinusClicked();
+
+		Assert.AreEqual(2, presenter.Result);
 	}
 }
