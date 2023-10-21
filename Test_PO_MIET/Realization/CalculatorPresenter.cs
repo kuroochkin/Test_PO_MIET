@@ -4,16 +4,26 @@ namespace Test_PO_MIET.Realization;
 
 public class CalculatorPresenter : ICalculatorPresenter
 {
+	public ICalculatorPresenter Presenter { get; set; }
+	
 	public ICalculator Calculator {  get; set; }
 
 	public ICalculatorView View { get; set; }
 
-	public double Result {  get; set; }	
+	public double Result { get; set; } = 0;
 
 	public CalculatorPresenter(
 		ICalculator calculator,
 		ICalculatorView view)
 	{
+		Calculator = calculator;
+		View = view;
+	}
+
+	public CalculatorPresenter(
+		ICalculatorPresenter presenter, ICalculator calculator, ICalculatorView view)
+	{
+		Presenter = presenter;
 		Calculator = calculator;
 		View = view;
 	}

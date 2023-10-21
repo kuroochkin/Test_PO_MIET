@@ -21,7 +21,7 @@ while (true)
 	if (choice == 5)
 		break;
 
-	double num1, num2, result;
+	double num1, num2;
 
 	Console.Write("Введите первое число: ");
 	num1 = Convert.ToDouble(Console.ReadLine());
