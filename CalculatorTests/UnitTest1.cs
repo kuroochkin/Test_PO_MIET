@@ -2,6 +2,8 @@ using Moq;
 using NUnit.Framework;
 using Test_PO_MIET.Interfaces;
 using Test_PO_MIET.Realization;
+using TestStack.White.UIItems;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CalculatorTests;
 
@@ -110,21 +112,5 @@ public class CalculatorTests
 		presenter.onDivideClicked();
 
 		Assert.AreEqual(5, presenter.Result);
-	}
-
-	public void Subtract_Preser()
-	{
-		var mock = new Mock<MainWindow>();
-
-		mock.Setup(a => a.Result).Returns(2);
-
-		var presenter = new CalculatorPresenter(mock.Object, new Calculator(), new CalculatorView());
-
-		presenter.Calculator.First = 5;
-		presenter.Calculator.Second = 3;
-
-		presenter.onMinusClicked();
-
-		Assert.AreEqual(2, presenter.Result);
 	}
 }

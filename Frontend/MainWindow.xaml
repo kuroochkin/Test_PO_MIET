@@ -16,7 +16,7 @@
         <Button Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="70,300,0,0" FontSize="20" Click="Number_Click"/>
         <Button Content="," HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="10,300,0,0" FontSize="20" Click="Number_Click"/>
 
-        <Button Content="/" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="190,60,0,0" FontSize="20" Click="Operator_Click"/>
+        <Button Name="Divide" Content="/" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="190,60,0,0" FontSize="20" Click="Operator_Click"/>
         <Button Content="x" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="190,-60,0,0" FontSize="20" Click="Operator_Click"/>
         <Button Content="-" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="190,180,0,0" FontSize="20" Click="Operator_Click"/>
         <Button Content="+" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="190,300,0,0" FontSize="20" Click="Operator_Click"/>

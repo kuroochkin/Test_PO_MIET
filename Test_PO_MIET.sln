@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_PO_MIET", "Test_PO_MIE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorTests", "CalculatorTests\CalculatorTests.csproj", "{D9C08295-FFD7-4DC9-BF07-411EC6E81021}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{147DCFB2-E89E-4690-8334-D644A2572CA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frontend", "Frontend\Frontend.csproj", "{147DCFB2-E89E-4690-8334-D644A2572CA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorFrontendTest", "CalculatorFrontendTest\CalculatorFrontendTest.csproj", "{F20E0A40-C627-46E8-B4D1-6DAEEFE7CCEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorFrontendTest", "CalculatorFrontendTest\CalculatorFrontendTest.csproj", "{F20E0A40-C627-46E8-B4D1-6DAEEFE7CCEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium", "Selenium\Selenium.csproj", "{20C4C85C-4282-403D-9301-01995371B80A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F20E0A40-C627-46E8-B4D1-6DAEEFE7CCEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F20E0A40-C627-46E8-B4D1-6DAEEFE7CCEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F20E0A40-C627-46E8-B4D1-6DAEEFE7CCEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C4C85C-4282-403D-9301-01995371B80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C4C85C-4282-403D-9301-01995371B80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C4C85C-4282-403D-9301-01995371B80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C4C85C-4282-403D-9301-01995371B80A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

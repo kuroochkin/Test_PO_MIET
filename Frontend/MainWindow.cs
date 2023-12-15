@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using Test_PO_MIET.Interfaces;
 using Test_PO_MIET.Realization;
@@ -11,7 +10,7 @@ public partial class MainWindow : Window
 	public ICalculatorPresenter Presenter = new CalculatorPresenter(new Calculator(), new CalculatorView());
 
 	private string currentInput = string.Empty;
-	private string currentOperator = string.Empty;
+	public string currentOperator = string.Empty;
 
 	private void Number_Click(object sender, RoutedEventArgs e)
 	{
